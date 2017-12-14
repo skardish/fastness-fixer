@@ -1,7 +1,7 @@
 /*
  * Modulifier || Code released under the UNLICENSE
  * Code under other copyrights & licenses listed below.
- * https://modulifier.web-dev.tools/#responsive;images;list-group;embed
+ * https://modulifier.web-dev.tools/#responsive;images;list-group;embed;hidden;positioning;nice-lists
  */
 
 @-moz-viewport { width: device-width; scale: 1; }
@@ -41,27 +41,6 @@ summary {
   display: block;
 }
 
-audio,
-canvas,
-progress,
-video {
-  display: inline-block;
-  vertical-align: baseline;
-}
-
-template {
-  display: none;
-}
-
-details {
-  cursor: pointer;
-}
-
-audio:not([controls]) {
-  display: none;
-  height: 0;
-}
-
 a,
 area,
 button,
@@ -76,42 +55,6 @@ textarea,
 
 img {
   border: 0;
-}
-
-.img-flex,
-.img-flex img {
-  display: block;
-  width: 100%;
-}
-
-svg {
-  fill: currentColor;
-}
-
-svg:not(:root) {
-  overflow: hidden;
-}
-
-svg.img-flex {
-  width: 100%;
-  height: 100%;
-}
-
-.image-replacement, .ir {
-  overflow: hidden;
-  direction: ltr;
-  text-align: left;
-  text-indent: 100%;
-  white-space: nowrap;
-}
-
-.list-group, .list-group-inline, .list-group--inline {
-  padding-left: 0;
-  list-style-type: none;
-}
-
-.list-group > dd {
-  margin-left: 0;
 }
 
 .list-group-inline::before,
@@ -132,19 +75,6 @@ svg.img-flex {
   display: inline-block;
 }
 
-.list-group-inline > dt,
-.list-group--inline > dt {
-  clear: left;
-  float: left;
-  width: 11em;
-}
-
-.list-group-inline > dd,
-.list-group--inline > dd {
-  float: left;
-  min-width: 12em;
-}
-
 .embed {
   margin-left: 0;
   margin-right: 0;
@@ -153,52 +83,8 @@ svg.img-flex {
   width: 100%;
 }
 
-.embed-1by1, .embed--1by1 {
-  padding-top: 100%; /* Square */
-}
-
-.embed-4by3, .embed--4by3 {
-  padding-top: 75%; /* Traditional TV/computer screens */
-}
-
-.embed-iso216, .embed--iso216 {
-  padding-top: 70.92%; /* A-standard paper sizes */
-}
-
 .embed-3by2, .embed--3by2 {
-  padding-top: 66.6%; /* Classic 35 mm film & most digital photos, landscape */
-}
-
-.embed-2by3, .embed--2by3 {
-  padding-top: 150%; /* Classic 35 mm film & most digital photos, portrait */
-}
-
-.embed-golden, .embed--golden {
-  padding-top: 61.8%; /* The Golden Ratio */
-}
-
-.embed-16by9, .embed--16by9 {
-  padding-top: 56.25%; /* HD TV */
-}
-
-.embed-185by100, .embed--185by100 {
-  padding-top: 54.05%; /* Common widescreen cinema */
-}
-
-.embed-24by10, .embed--24by10 {
-  padding-top: 41.667%; /* Widescreen cinema: 2.4:1 */
-}
-
-.embed-3by1, .embed--3by1 {
-  padding-top: 33.3333%; /* Panorama photos */
-}
-
-.embed-4by1, .embed--4by1 {
-  padding-top: 25%; /* Polyvision */
-}
-
-.embed-5by1, .embed--5by1 {
-  padding-top: 20%; /* Really wide... */
+  padding-top: 66.6%;
 }
 
 .embed-item, .embed__item {
@@ -207,4 +93,279 @@ svg.img-flex {
   position: absolute;
   top: 0;
   width: 100%;
+}
+
+.center-text,
+.center-flow {
+  text-align: center;
+}
+
+.center-block {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.no-auto-margins,
+.not-centered {
+  /* stylelint-disable declaration-no-important */
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  /* stylelint-enable */
+}
+
+.center-content,
+.center-content-vertical,
+.center-contents,
+.center-contents-vertical {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-flex-direction: column wrap;
+  -ms-flex-direction: column wrap;
+  flex-flow: column wrap;
+}
+
+.center-content-start,
+.center-content-vertical-start,
+.center-contents-start,
+.center-contents-vertical-start {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-direction: column wrap;
+  -ms-flex-direction: column wrap;
+  flex-flow: column wrap;
+}
+
+.center-content-horizontal,
+.center-contents-horizontal {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-flex-direction: row wrap;
+  -ms-flex-direction: row wrap;
+  flex-flow: row wrap;
+}
+
+.inline {
+  display: inline;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block, .ib {
+  display: inline-block;
+}
+
+.valign-top {
+  vertical-align: top;
+}
+
+.valign-bottom {
+  vertical-align: bottom;
+}
+
+.valign-middle {
+  vertical-align: middle;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.relative {
+  position: relative;
+}
+
+[class*="pin-"],
+.absolute {
+  position: absolute;
+}
+
+.static {
+  position: static;
+}
+
+.zindex-1 {
+  z-index: 1;
+}
+
+.zindex-2 {
+  z-index: 2;
+}
+
+.zindex-3 {
+  z-index: 3;
+}
+
+.zindex-1000 {
+  z-index: 1000;
+}
+
+.pin-top-left,
+.pin-left-top,
+.pin-tl,
+.pin-lt {
+  top: 0;
+  left: 0;
+}
+
+.pin-top-right,
+.pin-right-top,
+.pin-tr,
+.pin-rt {
+  top: 0;
+  right: 0;
+}
+
+.pin-bottom-left,
+.pin-left-bottom,
+.pin-bl,
+.pin-lb {
+  bottom: 0;
+  left: 0;
+}
+
+.pin-bottom-right,
+.pin-right-bottom,
+.pin-br,
+.pin-rb {
+  bottom: 0;
+  right: 0;
+}
+
+.pin-top-center,
+.pin-center-top,
+.pin-tc,
+.pin-ct {
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
+
+.pin-bottom-center,
+.pin-center-bottom,
+.pin-bc,
+.pin-cb {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.pin-center-left,
+.pin-left-center,
+.pin-cl,
+.pin-lc {
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.pin-center-right,
+.pin-right-center,
+.pin-cr,
+.pin-rc {
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.pin-center, .pin-c {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.width-quarter, .w-1-4 {
+  width: 25%;
+}
+
+.width-half, .w-1-2 {
+  width: 50%;
+}
+
+.width-full, .w-1 {
+  width: 100%;
+}
+
+.height-quarter, .h-1-4 {
+  height: 25%;
+}
+
+.height-half, .h-1-2 {
+  height: 50%;
+}
+
+.height-full, .h-1 {
+  height: 100%;
+}
+
+.height-win-quarter, .h-w-1-4 {
+  height: 25vh;
+  max-height: 46em;
+}
+
+.height-win-half, .h-w-1-2 {
+  height: 50vh;
+  max-height: 46em;
+}
+
+.height-win-full, .h-w-1 {
+  height: 100vh;
+  max-height: 46em;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul > li::before {
+  content: "·";
+  float: left;
+  margin-left: -1.6em;
+  width: 1.3em;
+  text-align: right;
+}
+
+ol {
+  counter-reset: ol-simple-numbers;
+  list-style-type: none;
+}
+
+ol > li::before {
+  float: left;
+  margin-left: -1.6em;
+  width: 1.3em;
+  counter-increment: ol-simple-numbers;
+  content: counter(ol-simple-numbers);
+  text-align: right;
+}
+
+.list-group > li::before,
+.list-group-inline > li::before,
+.list-group--inline > li::before {
+  content: none;
 }
